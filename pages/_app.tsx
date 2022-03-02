@@ -1,8 +1,16 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import "tailwindcss/tailwind.css";
+import { ThemeProvider } from "next-themes";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }:AppProps) {
+  return (
+    <ThemeProvider defaultTheme="dark" attribute="class">
+      {/* <Layout> */}
+        <Component {...pageProps} />
+      {/* </Layout> */}
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

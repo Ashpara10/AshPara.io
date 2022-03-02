@@ -1,0 +1,32 @@
+---
+title: "Creating Production ready Api-routes inbuilt in Next js!!"
+description: "For Next js "
+logo: "/twitter_profile.jpg"
+---
+
+# Here,s the code
+
+```
+import { NextApiHandler , NextApiRequest , NextApiResponse } from 'next'
+
+const handler:NextApiHandler = async (req:NextApiRequest,res:NextApiResponse) => {
+  if (req.method === 'PUT') {
+    res.status(201).json({});
+  }
+
+  if (req.method === 'GET') {
+    res.status(200).json({});
+  }
+
+  if (req.method === 'POST') {
+    res.status(200).json({});
+  }
+
+  if (req.method === 'DELETE') {
+    res.status(204).json({});
+  }
+}
+
+export default handler
+
+```
