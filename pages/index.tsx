@@ -1,33 +1,29 @@
 import type { GetStaticProps, NextPage } from "next";
-import { allBlogs } from "../.contentlayer/generated"
+import { allBlogs } from "../.contentlayer/generated";
 import { pick } from "@contentlayer/client";
-import React,{FC} from 'react'
+import BlogCard from "../Components/BlogCard";
+import React, { FC } from "react";
 
-// type BlogPost={
-//   title:string,
-//   createdAt:string,
-//   image:string,
-//   slug:string,
-//   body:any
-// }
-
-const Home:NextPage = (posts) => {
-  console.log(posts)
-  return(
-   <div>
-  Hello 
-  </div>
-)}
+const Home = ({ posts }:any) => {
+  return (
+    <div className="p-3 w-full  flex flex-col items-center justify-center">
+      <section className="w-full flex flex-col items-center justify-center gap-y-3 ">
+        {posts.map((data:any) => (
+          <BlogCard key={data.slug} post={data} />
+        ))}
+      </section>
+    </div>
+  );
+};
 
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-
   const posts = allBlogs.map((post) =>
     pick(post, ["title", "createdAt", "image", "slug", "body"])
   );
 
   return {
-    props: {posts},
+    props: { posts },
   };
 };

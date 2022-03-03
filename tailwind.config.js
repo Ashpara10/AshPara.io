@@ -5,7 +5,13 @@ module.exports = {
     "./Components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+      "robosab":['Raleway', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    // preflight: false, 
+  }
 }

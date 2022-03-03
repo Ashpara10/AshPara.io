@@ -1,3 +1,22 @@
+@tailwind base;
+
+@layer base {
+
+  table {
+    display: block;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+::root {
+  --bg-dark: #0f0f0f;
+}
+
 html,
 body {
   padding: 0;
@@ -6,11 +25,95 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.navbar {
+  @apply fixed top-0 w-full h-[65px] flex items-center  justify-between py-2.5 px-4 bg-gray-100 z-10  dark:bg-[#050504];
 }
 
-* {
-  box-sizing: border-box;
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.punctuation {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-green-700 dark:text-green-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-purple-700 dark:text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-600 dark:text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-blue-700 dark:text-blue-500;
+}
+
+.token.function,
+.token.class-name {
+  @apply text-pink-700 dark:text-pink-500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-yellow-500;
+}
+
+/* .rehype-code-title{
+  @apply font-mono bg-gray-300 rounded-md p-2.5
+} */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  @apply text-gray-800 dark:text-gray-50;
+}
+
+pre {
+  @apply overflow-auto my-2 border border-gray-200 dark:border-[#ffffff17]  p-2.5 rounded-md;
+}
+pre {
+  scrollbar-width: none;
+}
+
+
+.unsetcss h1 {
+ @apply text-3xl font-bold
+}
+.unsetcss h3 {
+ @apply text-2xl font-bold
+}
+.unsetcss h3 {
+ @apply text-2xl font-bold
+}
+
+.unsetcss ul{
+  @apply list-disc px-7 my-2
+}
+.unsetcss ol{
+  @apply list-decimal w-full flex flex-col  px-7 my-2
 }

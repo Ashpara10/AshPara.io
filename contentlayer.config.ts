@@ -1,16 +1,25 @@
-import { makeSource, defineDocumentType } from "contentlayer/source-files";
+import {
+  ComputedFields,
+  makeSource,
+  defineDocumentType,
+} from "contentlayer/source-files";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeCodeTitles from "rehype-code-titles";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrism from "rehype-prism-plus";
 
-
-const computedFields:any = {
+const computedFields: ComputedFields = {
   slug: {
     type: "string",
-    resolve: (doc:any) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    resolve: (doc: any) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
   },
 };
 
 const Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: `blogs/*.mdx`,
+  contentType:'mdx',
   fields: {
     title: { type: "string", required: true },
     image: { type: "string", required: true },
@@ -21,7 +30,7 @@ const Blog = defineDocumentType(() => ({
 const Snippet = defineDocumentType(() => ({
   name: "Snippet",
   filePathPattern: "snippets/*.mdx",
-  bodyType: "mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },
@@ -34,6 +43,7 @@ export default makeSource({
   contentDirPath: "data",
   documentTypes: [Blog, Snippet],
   mdx: {
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug, rehypeCodeTitles, rehypePrism],
   },
 });
