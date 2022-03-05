@@ -1,39 +1,36 @@
 ---
 title: "Two Forms of Pre-rendering using next-contentlayer and Next js??"
-image: '/totoro.jpg'
+description: "Exploring Data fectching methods and static site generation features in next js "
+image: "/totoro.jpg"
 createdAt: "2022-02-27"
 ---
 
 > Next.js has two forms of pre-rendering: [**Static Generation**](http://next.org) and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
-
 # Hello World
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
 
-1. Happy 😄
-2. Sad 😄
+- ✅ **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then \_reused\* on each request.
+- ✅ **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
 
 Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
 
 [Next js](https://nextjs.org)
+
 ## Hello World
+
 ### Hello World
 
- note[^1]
+note[^1]
 
 [^1]: Big note.
-
 
 ## Strikethrough
 
 ~one~ or ~~two~~ tildes.
 
-
 ```jsx
 //index.js
 const BlogCard = ({ post }: BlogProps) => {
-  
   return (
     <article className=" max-w-md  w-full flex flex-col items-center justify-center gap-y-2 overflow-hidden ">
       <div className="w-full flex items-center justify-center">
@@ -50,7 +47,7 @@ const BlogCard = ({ post }: BlogProps) => {
         <Link href={`/blog/${post.slug}`}>
           <h2 className="text-2xl text-left font-bold ">{post.title}</h2>
         </Link>
-    
+
         <span className=" w-full text-left font-mono dark:text-gray-300">
           {new Date(post.createdAt).toLocaleDateString()}
         </span>
@@ -61,4 +58,5 @@ const BlogCard = ({ post }: BlogProps) => {
 
 export default BlogCard;
 ```
+
 You can [view the entire source code here](https://github.com/leerob/youtube-to-mp3). Happy coding! 😄

@@ -6,7 +6,7 @@ const AnchorTag = (props: any) => {
     <a
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-700 hover:underline"
+      className="text-blue-800 dark:text-blue-600 underline decoration-[1.5px]"
       href={props.href}
     >
       {props.children}
@@ -25,7 +25,7 @@ const StyledHeading1 = (props: any) => {
 
 const BlockQuote = (props: any) => {
   return (
-    <blockquote className="w-full rounded-sm border-l-[.25rem] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 p-2.5 font-semibold italic  bg-yellow-200 bg-opacity-70 dark:bg-transparent dark:text-gray-200">
+    <blockquote className="w-full rounded-sm border-l-[.25rem] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 p-2.5 font-semibold italic     dark:text-gray-300">
       {props.children}
     </blockquote>
   );
@@ -48,9 +48,16 @@ const StyledHeading3 = (props: any) => {
 
 const UnorderedList = (props: any) => {
   return (
-    <ul className="w-full max-w-xl font-sans list-disc flex gap-y-2 my-2 flex-col mx-auto">
+    <ul className="w-full max-w-xl list-disc mx-auto flex gap-y-2 my-2 flex-col ">
       {props.children}
     </ul>
+  );
+};
+const OrderedList = (props: any) => {
+  return (
+    <ol className="w-full max-w-xl list-decimal mx-auto font-robo flex gap-y-2 my-2 flex-col ">
+      {props.children}
+    </ol>
   );
 };
 
@@ -62,18 +69,25 @@ const RoundedImage = (props: any) => {
       width={props.width}
       height={props.height}
       quality={100}
+      loading="lazy"
     />
   );
 };
 
+const Para = (props: any) => {
+  return <p className="w-full ">{props.children}</p>;
+};
+
 const MdxComponent = {
-  img: RoundedImage,
+  Image: RoundedImage,
   h1: StyledHeading1,
   h2: StyledHeading2,
   h3: StyledHeading3,
   ul: UnorderedList,
+  ol: OrderedList,
   a: AnchorTag,
   blockquote: BlockQuote,
+  p: Para,
 };
 
 export default MdxComponent;
