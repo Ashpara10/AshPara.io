@@ -15,7 +15,7 @@ const Navbar: React.FC = ({ children }) => {
         >
           {theme === "light" ? <BiMoon /> : <BiSun />}
         </button>
-        <button className=" visible  md:hidden font-extrabold rounded-lg text-xl bg-stone-800 dark:text-gray-100 p-3">
+        <button className=" visible  md:hidden font-extrabold rounded-lg text-xl text-gray-900 dark:text-gray-100 p-3">
           <AiOutlineMenu />
         </button>
       </div>
