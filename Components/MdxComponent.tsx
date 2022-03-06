@@ -6,7 +6,7 @@ const AnchorTag = (props: any) => {
     <a
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-800 dark:text-blue-600 underline decoration-[1.5px]"
+      className="text-blue-800 dark:text-blue-600 underline underline-offset-4 decoration-[1.5px]"
       href={props.href}
     >
       {props.children}
@@ -48,14 +48,14 @@ const StyledHeading3 = (props: any) => {
 
 const UnorderedList = (props: any) => {
   return (
-    <ul className="w-full max-w-xl list-disc mx-auto flex gap-y-2 my-2 flex-col ">
+    <ul className="w-full list-outside max-w-xl list-disc mx-auto flex gap-y-2 my-2 flex-col ">
       {props.children}
     </ul>
   );
 };
 const OrderedList = (props: any) => {
   return (
-    <ol className="w-full max-w-xl list-decimal mx-auto font-robo flex gap-y-2 my-2 flex-col ">
+    <ol className="w-full max-w-xl list-decimal mx-auto  flex gap-y-2 my-2 flex-col ">
       {props.children}
     </ol>
   );
@@ -74,11 +74,16 @@ const RoundedImage = (props: any) => {
   );
 };
 
+const StrongTag = (props: any) => {
+  return <strong className=" font-bold">{props.children}</strong>;
+};
+
 const Para = (props: any) => {
   return <p className="w-full ">{props.children}</p>;
 };
 
 const MdxComponent = {
+  strong: StrongTag,
   Image: RoundedImage,
   h1: StyledHeading1,
   h2: StyledHeading2,

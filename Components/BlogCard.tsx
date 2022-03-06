@@ -21,13 +21,10 @@ const BlogCard = ({ post }: BlogProps) => {
           height={300}
         />
       </div>
-      <div className="w-full flex flex-col items-center justify-center px-1 pb-3 gap-y-1.5">
+      <div className="w-full flex flex-col items-center  justify-center px-1 pb-3 gap-y-1.5">
         <Link href={`/blog/${post.slug}`}>
           <h2 className="text-2xl font-bold">{post.title}</h2>
         </Link>
-        <p className="w-full text-left text-gray-900 dark:text-gray-300 font-nsan break-all">
-          {post.description}
-        </p>
       </div>
     </article>
   );

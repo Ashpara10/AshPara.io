@@ -11,7 +11,7 @@ module.exports = {
       fontFamily: {
         robosab: ["Raleway", "sans-serif"],
         robo: ["Roboto", "sans-serif"],
-        nsan: ["Noto Sans ", "sans-serif"],
+        Ibmsan: ["IBM Plex Sans", "sans-serif"],
       },
     },
   },

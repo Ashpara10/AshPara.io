@@ -1,34 +1,22 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { useTheme } from "next-themes";
 import { BiSun, BiMoon } from "react-icons/bi";
-import router from "next/router";
+import { AiOutlineMenu } from "react-icons/ai";
 
-const Navbar:React.FC = () => {
+const Navbar: React.FC = ({ children }) => {
   const { theme, setTheme } = useTheme();
   return (
     <nav className="navbar">
-      <div className="max-w-lg flex items-center justify-center">
-        <ul className="w-full flex items-center justify-center font-mono gap-x-1">
-          <li
-            className="px-2 py-1 rounded-lg dark:hover:bg-[#1a1a1a] dark:hover:text-gray-100 hover:bg-blue-100 hover:text-blue-800 hover:transition-all "
-            onClick={() => router.push("/")}
-          >
-            Blog
-          </li>
-          <li
-            className="px-2 py-1 rounded-lg dark:hover:bg-[#1a1a1a] dark:hover:text-gray-100 hover:bg-blue-100 hover:text-blue-800 hover:transition-all "
-            onClick={() => router.push("/snippets")}
-          >
-            Snippets
-          </li>
-        </ul>
-      </div>
-      <div className=" flex items-center justify-center ">
+      <div className=" flex items-center justify-center">{children}</div>
+      <div className=" flex items-center text-xl justify-between gap-x-2 ">
         <button
-          className=" text-xl bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-gray-900 dark:hover:bg-orange-300 p-3 rounded-lg font-mono"
+          className=" font-bold bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-gray-900 dark:hover:bg-orange-300 p-3 rounded-lg font-mono"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "light" ? <BiMoon /> : <BiSun />}
+        </button>
+        <button className=" visible  md:hidden font-extrabold rounded-lg text-xl bg-stone-800 dark:text-gray-100 p-3">
+          <AiOutlineMenu />
         </button>
       </div>
     </nav>
@@ -36,3 +24,22 @@ const Navbar:React.FC = () => {
 };
 
 export default Navbar;
+
+export const NavList: React.FC = (props) => {
+  return (
+    <ul className=" invisible md:visible text-base w-full text-gray-800 dark:text-gray-200 flex items-center justify-center font-mono gap-x-2">
+      {props.children}
+    </ul>
+  );
+};
+
+// export const NavItem = (props: any, path: string) => {
+//   return (
+//     <li
+//       onClick={() => router.push(path)}
+//       className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#121211] dark:hover:text-white transition-opacity rounded-md  "
+//     >
+//       {props.children}
+//     </li>
+//   );
+// };

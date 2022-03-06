@@ -68,7 +68,7 @@ const SearchBox = ({ query, onChange }: SearchInput) => {
       value={query}
       placeholder={"Search for Blogs..."}
       onChange={onChange}
-      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl w-full border border-gray-300 dark:border-none bg-inherit dark:bg-[#121211] "
+      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl w-full border border-gray-300 dark:border-none bg-white dark:bg-[#121211] "
     />
   );
 };

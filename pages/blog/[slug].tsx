@@ -32,8 +32,10 @@ const BlogPost = ({ post }: { post: Blog }) => {
                   height={36}
                   className="rounded-full flex items-center justify-center object-contain"
                 />
-                <span className="px-2"> AshPara /</span>
-                <span>{moment(post.createdAt).format("MMM DD Y")}</span>
+                <span className="px-2">
+                  {" "}
+                  AshPara/{moment(post.createdAt).format("MMMM DD Y")}
+                </span>
               </div>
               <div className="flex items-center justify-center gap-x-1">
                 <span>{post.readingTime.text}</span>
@@ -47,7 +49,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
             priority
             className="w-full p-1.5 rounded-md "
           />
-          <div className="max-w-none w-full  ">
+          <div className="max-w-none w-full flex flex-col gap-y-3 px-1.5 ">
             <Component components={MdxComponent} />
           </div>
         </div>
