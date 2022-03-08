@@ -6,9 +6,12 @@ import SnippetCard from "../Components/SnippetCard";
 
 const SnippetPage = ({ posts }: any) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full gap-y-2 flex flex-col items-center justify-center">
       <h1 className="text-4xl my-3 font-bold ">Code Snippets</h1>
-      <section className="max-w-2xl px-2 w-full grid grid-cols-1 md:grid-cols-2 items-center justify-center">
+      <p className="font-mono w-full max-w-xs px-3 text-gray-700 dark:text-gray-300 ">
+        A gallery of my code snippets focused on creating shit..
+      </p>
+      <section className="max-w-2xl py-3 px-2 w-full grid grid-cols-1 md:grid-cols-2 items-center justify-center">
         {posts.map((data: Snippet) => {
           return <SnippetCard key={data.slug} snippet={data} />;
         })}
