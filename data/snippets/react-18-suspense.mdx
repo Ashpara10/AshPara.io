@@ -1,0 +1,19 @@
+---
+title: "React 18 Concurrent mode"
+description: "Exploring the concurrent mode and other features in react 18."
+createdAt: "2022-03-09"
+logo: "/twitter_profile.jpg"
+---
+
+Nextjs provides an api folder in the `pages` directory
+
+```jsx
+import React, { Suspense } from "next";
+
+export default function Home() {
+  return;
+  <div>
+    <Suspense fallback={<Spinner />}>{/* some component */}</Suspense>
+  </div>;
+}
+```

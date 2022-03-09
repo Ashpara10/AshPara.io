@@ -25,7 +25,7 @@ const SnippetPost = ({ snippet }: SnippetProps) => {
             className="rounded-full w-full ml-1 "
           />
         </div>
-        <div className="max-w-none w-full flex flex-col gap-y-3 prose-p:font-sans prose-p:text-[medium] ">
+        <div className="max-w-none w-full flex flex-col gap-y-3 prose-pre:my-2 prose-p:text-[medium] prose-p:font-sans ">
           <Component />
         </div>
       </article>
