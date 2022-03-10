@@ -8,7 +8,7 @@ type SnippetType = {
 
 const SnippetCard = ({ snippet }: SnippetType) => {
   return (
-    <article className="max-w-md bg-white dark:bg-[#121211] flex flex-col items-center justify-center gap-y-1 border  border-gray-300 dark:border-none dark:hover:brightness-[1.2] rounded-sm p-3">
+    <article className=" bg-white dark:bg-[#121211] flex flex-col items-center justify-center gap-y-1 border  border-gray-300 dark:border-none dark:hover:brightness-[1.2] rounded-sm p-3">
       <div className="w-full flex items-center justify-start">
         <Image
           src={"/twitter_profile.jpg"}

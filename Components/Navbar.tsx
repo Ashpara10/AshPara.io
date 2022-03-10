@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import { useTheme } from "next-themes";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -32,14 +32,3 @@ export const NavList: React.FC = (props) => {
     </ul>
   );
 };
-
-// export const NavItem = (props: any, path: string) => {
-//   return (
-//     <li
-//       onClick={() => router.push(path)}
-//       className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#121211] dark:hover:text-white transition-opacity rounded-md  "
-//     >
-//       {props.children}
-//     </li>
-//   );
-// };
