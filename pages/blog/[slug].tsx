@@ -50,9 +50,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
             className="w-full p-1.5 rounded-md "
           />
           <div className="max-w-none w-full  flex flex-col gap-y-3 px-1.5 ">
-            <Component
-            // components={MdxComponent}
-            />
+            <Component components={MdxComponent} />
           </div>
         </div>
       </article>
