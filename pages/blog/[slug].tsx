@@ -25,7 +25,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
           </h2>
           <div className="w-full flex  items-center justify-between">
             <div className="w-full flex items-center justify-between gap-x-1 font-mono">
-              <div className="flex items-center justify-center gap-x-1">
+              {/* <div className="flex items-center justify-center gap-x-1">
                 <Image
                   src={"/twitter_profile.jpg"}
                   width={36}
@@ -36,7 +36,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
                   {" "}
                   AshPara/{moment(post.createdAt).format("MMMM DD Y")}
                 </span>
-              </div>
+              </div> */}
               <div className="flex items-center justify-center gap-x-1">
                 <span>{post.readingTime.text}</span>
               </div>
