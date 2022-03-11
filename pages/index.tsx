@@ -20,6 +20,7 @@ const Home = ({ posts }: any) => {
 
   return (
     <div className="px-5 w-full  flex flex-col items-center justify-center">
+      {/* <h1 className="w-full text-center text-4xl font-bold">Blog Posts</h1> */}
       <div className="w-full flex items-center justify-center py-3">
         <SearchBox
           query={search}

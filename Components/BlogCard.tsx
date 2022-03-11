@@ -16,14 +16,14 @@ const BlogCard = ({ post }: BlogProps) => {
           src={post.image}
           quality={100}
           loading="lazy"
-          className="rounded-md border "
+          className="rounded-lg border "
           width={500}
           height={300}
         />
       </div>
       <div className="w-full flex flex-col items-center  justify-center px-1 pb-3 gap-y-1.5">
         <Link href={`/blog/${post.slug}`}>
-          <h2 className="text-2xl font-bold">{post.title}</h2>
+          <h2 className="text-2xl font-bold leading-[1.2]">{post.title}</h2>
         </Link>
       </div>
     </article>

@@ -6,7 +6,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 const Navbar: React.FC = ({ children }) => {
   const { theme, setTheme } = useTheme();
   return (
-    <nav className="navbar">
+    <nav className="navbar  ">
       <div className=" flex items-center justify-center">{children}</div>
       <div className=" flex items-center text-xl justify-between gap-x-2 ">
         <button

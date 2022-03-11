@@ -25,7 +25,7 @@ const StyledHeading1 = (props: any) => {
 
 const BlockQuote = (props: any) => {
   return (
-    <blockquote className="w-full rounded-sm border-l-[.25rem] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 p-2.5 font-semibold italic     dark:text-gray-300">
+    <blockquote className="w-full rounded-sm border-l-[.25rem] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 py-2 px-3 font-semibold italic    dark:text-gray-300">
       {props.children}
     </blockquote>
   );
@@ -79,7 +79,7 @@ const StrongTag = (props: any) => {
 };
 
 const Para = (props: any) => {
-  return <p className="w-full ">{props.children}</p>;
+  return <p className="w-full font-normal">{props.children}</p>;
 };
 
 const MdxComponent = {
