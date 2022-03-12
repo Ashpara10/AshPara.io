@@ -14,7 +14,7 @@ const Home = () => {
         </div>
         <div className="w-full flex flex-col px-3 items-center justify-between">
           <h1 className="w-full text-left text-4xl md:text-5xl font-fre  font-bold ">
-            Ashwin Parande
+            AshPara🌱
           </h1>
           <p className="font-mono max-w-sm text-gray-700 dark:text-gray-300 ">
             Developer/Artist/Anime enthusiast learning and honing my developer
