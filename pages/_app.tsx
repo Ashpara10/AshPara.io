@@ -7,7 +7,7 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider defaultTheme="dark" attribute="class">
+    <ThemeProvider attribute="class">
       <Layout>
         <Head>
           <title>Ashpara</title>

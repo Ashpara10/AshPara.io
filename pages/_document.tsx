@@ -12,7 +12,7 @@ const MyDocument = () => {
         crossOrigin="true"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Noto+Sans&family=Roboto:wght@900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700?family=Roboto:wght@900&display=swap"
         rel="stylesheet"
       />
       <body className=" bg-gray-50 dark:bg-[#050504]">

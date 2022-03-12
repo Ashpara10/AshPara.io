@@ -14,7 +14,7 @@ const Layout: React.FC = (props) => {
             Home
           </li>
           <li
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/blog")}
             className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#121211] dark:hover:text-white transition-opacity rounded-md  "
           >
             Blog

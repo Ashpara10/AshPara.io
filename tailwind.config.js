@@ -9,9 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        robosab: ["Raleway", "sans-serif"],
         robo: ["Roboto", "sans-serif"],
-        Ibmsan: ["IBM Plex Sans", "sans-serif"],
+        fre: ["Fredoka", "sans-serif"],
       },
     },
   },

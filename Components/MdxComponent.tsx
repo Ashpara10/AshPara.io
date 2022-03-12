@@ -6,7 +6,7 @@ const AnchorTag = (props: any) => {
     <a
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-800 dark:text-blue-600 underline underline-offset-4 decoration-[1.5px]"
+      className="text-blue-700 dark:text-blue-600 underline "
       href={props.href}
     >
       {props.children}

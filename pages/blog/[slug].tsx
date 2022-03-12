@@ -20,12 +20,12 @@ const BlogPost = ({ post }: { post: Blog }) => {
       </Head>
       <article className="max-w-2xl w-full p-3 flex flex-col items-center justify-center gap-y-2">
         <div className="w-full flex flex-col gap-y-3 items-center justify-center">
-          <h2 className="font-bold  mb-2 text-3xl md:text-4xl tracking-tight  text-black dark:text-gray-100">
+          <h2 className="font-bold w-full text-left font-pre mb-2 text-3xl md:text-4xl tracking-tight  text-black dark:text-gray-100">
             {post.title}
           </h2>
           <div className="w-full flex  items-center justify-between">
             <div className="w-full flex items-center justify-between gap-x-1 font-mono">
-              {/* <div className="flex items-center justify-center gap-x-1">
+              <div className="flex items-center justify-center gap-x-1">
                 <Image
                   src={"/twitter_profile.jpg"}
                   width={36}
@@ -33,12 +33,10 @@ const BlogPost = ({ post }: { post: Blog }) => {
                   className="rounded-full flex items-center justify-center object-contain"
                 />
                 <span className="px-2">
-                  {" "}
-                  AshPara/{moment(post.createdAt).format("MMMM DD Y")}
+                  {moment(post.createdAt).format("MMMM DD Y")}
+                  {" / "}
+                  <span>{post.readingTime.text}</span>{" "}
                 </span>
-              </div> */}
-              <div className="flex items-center justify-center gap-x-1">
-                <span>{post.readingTime.text}</span>
               </div>
             </div>
           </div>
@@ -49,7 +47,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
             priority
             className="w-full p-1.5 rounded-md "
           />
-          <div className="max-w-none w-full  flex flex-col gap-y-3 px-1.5 ">
+          <div className="max-w-none  w-full flex flex-col gap-y-3 px-1.5 ">
             <Component components={MdxComponent} />
           </div>
         </div>

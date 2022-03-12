@@ -23,7 +23,7 @@ const BlogCard = ({ post }: BlogProps) => {
       </div>
       <div className="w-full flex flex-col items-center  justify-center px-1 pb-3 gap-y-1.5">
         <Link href={`/blog/${post.slug}`}>
-          <h2 className="text-2xl font-bold leading-[1.2]">{post.title}</h2>
+          <h2 className="w-full text-left text-2xl font-bold">{post.title}</h2>
         </Link>
       </div>
     </article>

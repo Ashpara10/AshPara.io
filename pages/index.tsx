@@ -1,75 +1,28 @@
-import type { GetStaticProps, NextPage } from "next";
-import { allBlogs } from "../.contentlayer/generated";
-import { pick } from "@contentlayer/client";
-import BlogCard from "../Components/BlogCard";
-import React, { ChangeEvent, ChangeEventHandler, FC, useState } from "react";
-import Fuse from "fuse.js";
+import Image from "next/image";
 
-const Home = ({ posts }: any) => {
-  const [search, setSearch] = useState("");
-
-  const options = {
-    includeScore: false,
-    keys: ["title", "body.raw", "description"],
-  };
-
-  const fuse = new Fuse(posts, options);
-
-  const result = fuse.search(String(search.length > 1 && search));
-  console.log(result.length > 0 && result);
-
+const Home = () => {
   return (
-    <div className="px-5 w-full  flex flex-col items-center justify-center">
-      {/* <h1 className="w-full text-center text-4xl font-bold">Blog Posts</h1> */}
-      <div className="w-full flex items-center justify-center py-3">
-        <SearchBox
-          query={search}
-          onChange={(e: any) => setSearch(e.target.value)}
-        />
+    <div className="w-full flex flex-col items-center justify-center ">
+      <div className=" max-w-xl my-5 px-3 gap-x-2 flex  items-center justify-center">
+        <div>
+          <Image
+            src={"/twitter_profile.jpg"}
+            width={58}
+            height={58}
+            className="rounded-full"
+          />
+        </div>
+        <div className="w-full flex flex-col px-3 items-center justify-between">
+          <h1 className="w-full text-left text-4xl md:text-5xl font-fre  font-bold ">
+            Ashwin Parande
+          </h1>
+          <p className="font-mono max-w-sm text-gray-700 dark:text-gray-300 ">
+            Developer/Artist/Anime enthusiast learning and honing my developer
+            skills...
+          </p>
+        </div>
       </div>
-      <section className="w-full flex flex-col items-center justify-center gap-y-4 ">
-        {search.length !== 0
-          ? result.map((data: any) => {
-              return <BlogCard key={data?.item.slug} post={data?.item} />;
-            })
-          : posts.map((data: any) => <BlogCard key={data.slug} post={data} />)}
-      </section>
     </div>
   );
 };
-
 export default Home;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = allBlogs.map((post) =>
-    pick(post, [
-      "title",
-      "description",
-      "createdAt",
-      "image",
-      "slug",
-      "body",
-      "wordCount",
-      "readingTime",
-    ])
-  );
-
-  return {
-    props: { posts },
-  };
-};
-type SearchInput = {
-  query: string;
-  onChange: any;
-};
-
-const SearchBox = ({ query, onChange }: SearchInput) => {
-  return (
-    <input
-      value={query}
-      placeholder={"Search for Blogs..."}
-      onChange={onChange}
-      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl w-full border border-gray-300 dark:border-none bg-white dark:bg-[#121211] "
-    />
-  );
-};
