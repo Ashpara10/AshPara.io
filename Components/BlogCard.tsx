@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import moment from "moment";
 import { Blog } from "../.contentlayer/generated";
+import ViewsManager from "./Views";
 
 type BlogProps = {
   post: Blog;
@@ -10,7 +11,7 @@ type BlogProps = {
 
 const BlogCard = ({ post }: BlogProps) => {
   return (
-    <article className=" max-w-md  w-full flex flex-col items-center justify-center gap-y-2 dark:border-gray-700 overflow-hidden ">
+    <article className=" max-w-sm  w-full flex flex-col items-center justify-center gap-y-2 dark:border-gray-700 overflow-hidden ">
       <div className="w-full flex items-center justify-center">
         <Image
           src={post.image}
@@ -25,6 +26,7 @@ const BlogCard = ({ post }: BlogProps) => {
         <Link href={`/blog/${post.slug}`}>
           <h2 className="w-full text-left text-2xl font-bold">{post.title}</h2>
         </Link>
+        {/* <ViewsManager slug={post.slug} /> */}
       </div>
     </article>
   );

@@ -5,6 +5,7 @@ import { allBlogs, Blog } from "../../.contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MdxComponent from "../../Components/MdxComponent";
 import moment from "moment";
+import ViewsManager from "../../Components/Views";
 
 type BlogProps = {
   post: Blog;
@@ -35,7 +36,8 @@ const BlogPost = ({ post }: { post: Blog }) => {
                 <span className="px-2">
                   {moment(post.createdAt).format("MMMM DD Y")}
                   {" / "}
-                  <span>{post.readingTime.text}</span>{" "}
+                  <span>{post.readingTime.text}</span> {" / "}
+                  <ViewsManager slug={post.slug} />
                 </span>
               </div>
             </div>

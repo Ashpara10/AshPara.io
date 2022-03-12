@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar, { NavList } from "./Navbar";
 import router from "next/router";
+import Footer from "./Footer";
 
 const Layout: React.FC = (props) => {
   return (
@@ -28,6 +29,7 @@ const Layout: React.FC = (props) => {
         </NavList>
       </Navbar>
       <main className="mt-[70px] ">{props.children}</main>
+      {/* <Footer /> */}
     </div>
   );
 };

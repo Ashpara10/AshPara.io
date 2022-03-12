@@ -14,11 +14,13 @@ const SnippetCard = ({ snippet }: SnippetType) => {
           onClick={() =>
             router.push("/snippet/[slug]", `/snippet/${snippet.slug}`)
           }
-          className="text-2xl text-black/95 dark:text-white font-bold w-full text-left"
+          className="text-2xl text-black/95 dark:text-gray-100 font-bold w-full text-left"
         >
           {snippet.title}
         </h2>
-        <p className="w-full font-mono ">{snippet.description}</p>
+        <p className="w-full font-mono text-gray-900 dark:text-gray-300 ">
+          {snippet.description}
+        </p>
       </div>
     </article>
   );

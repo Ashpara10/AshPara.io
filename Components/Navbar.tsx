@@ -10,7 +10,7 @@ const Navbar: React.FC = ({ children }) => {
       <div className=" flex items-center justify-center">{children}</div>
       <div className=" flex items-center text-xl justify-between gap-x-2 ">
         <button
-          className=" font-bold bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-gray-900 dark:hover:bg-orange-300 p-3 rounded-lg font-mono"
+          className=" font-bold bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-300 text-white dark:text-gray-900 dark:hover:bg-orange-400 p-3 rounded-lg font-mono"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "light" ? <BiMoon /> : <BiSun />}
