@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import useSWR from "swr";
 import fetcher from "./lib/fetcher";
+import { FiEye } from "react-icons/fi";
 
 type Views = {
   views: Number;
@@ -24,8 +25,8 @@ const ViewsManager = ({ slug }: BlogSlug) => {
     updateViews();
   }, [slug]);
   return (
-    <span className="font-mono text-gray-900 dark:text-gray-200">
-      {views?.toString()} views
+    <span className="font-mono flex items-center justify-center gap-x-1 text-gray-900 dark:text-gray-200">
+      {views?.toString()} <FiEye />
     </span>
   );
 };

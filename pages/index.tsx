@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export async function getServerSideProps() {
   const res = await fetch("https://api.github.com/users/Ashpara10/repos");
   const data = await res.json();
@@ -14,11 +14,26 @@ const Home = ({ data }: any) => {
   console.log(data);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center ">
-      <HomeCard />
-      <section className="max-w-3xl grid grid-cols-2">
+    <div className=" w-full flex flex-col items-center justify-center ">
+      <div className=" w-full flex items-center justify-center ">
+        <HomeCard />
+      </div>
+      {/* <h1 className="text-4xl w-full text-center my-4 font-bold">
+        Github Repos
+      </h1> */}
+      <section className="max-w-3xl grid grid-cols-2 gap-2 px-3">
         {data.map((e: any) => {
-          return <h2 className="text-2xl font-bold ">{e.name}</h2>;
+          return (
+            <div className="max-w-md p-2.5 flex flex-col items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-[#121211]">
+              <a
+                href={e.html_url}
+                target="_blank"
+                className="w-full text-left  hover:underline dark:hover:text-blue-600 hover:text-blue-700"
+              >
+                {e.name}
+              </a>
+            </div>
+          );
         })}
       </section>
     </div>
