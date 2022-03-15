@@ -10,19 +10,19 @@ const Layout: React.FC = (props) => {
         <NavList>
           <li
             onClick={() => router.push("/")}
-            className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#121211] dark:hover:text-white transition-opacity rounded-md  "
+            className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#6e6e6e1c] dark:hover:text-white hover:transition-all hover:delay-75 rounded-md  "
           >
             Home
           </li>
           <li
             onClick={() => router.push("/blog")}
-            className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#121211] dark:hover:text-white transition-opacity rounded-md  "
+            className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#6e6e6e1c] dark:hover:text-white hover:transition-all hover:delay-75 rounded-md  "
           >
             Blog
           </li>
           <li
             onClick={() => router.push("/snippets")}
-            className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#121211] dark:hover:text-white transition-opacity rounded-md  "
+            className="py-1 px-3 hover:text-black hover:bg-gray-200 dark:hover:bg-[#6e6e6e1c] dark:hover:text-white hover:transition-all hover:delay-75 rounded-md  "
           >
             Snippets
           </li>

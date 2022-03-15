@@ -29,7 +29,7 @@ body {
 }
 
 .navbar {
-  @apply fixed top-0 w-full h-[65px] flex items-center  justify-between py-2.5 px-4 bg-gray-50 z-10  dark:bg-[#050504];
+  @apply fixed top-0 w-full h-[65px] flex items-center  justify-between py-2.5 px-4 bg-gray-50 z-10  dark:bg-[#111010];
 }
 
 .token.comment,

@@ -23,7 +23,6 @@ const BlogCard = ({ post }: BlogProps) => {
         <Link href={`/blog/${post.slug}`}>
           <h2 className="text-2xl font-bold">{post.title}</h2>
         </Link>
-        <p className="font-sans w-full break-all px-1 ">{post.description}</p>
         <span className="font-mono  w-full flex items-center justify-start gap-x-1 text-gray-900 dark:text-gray-200">
           {views?.toString()} <FiEye />
         </span>

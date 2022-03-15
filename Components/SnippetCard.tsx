@@ -8,7 +8,7 @@ type SnippetType = {
 
 const SnippetCard = ({ snippet }: SnippetType) => {
   return (
-    <article className=" w-full bg-white dark:bg-[#121211] flex flex-col items-center justify-center gap-y-1 border  border-gray-300 dark:border-none dark:hover:brightness-[1.2] rounded-md p-3">
+    <article className=" w-full bg-white dark:bg-[#111010] flex flex-col items-center justify-center gap-y-1 border  border-gray-300 dark:border-gray-700 dark:border-opacity-30 dark:hover:brightness-[1.2] rounded-md p-3">
       <div className="w-full p-2 flex flex-col items-center justify-between gap-y-2">
         <h2
           onClick={() =>

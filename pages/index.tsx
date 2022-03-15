@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 export async function getServerSideProps() {
   const res = await fetch("https://api.github.com/users/Ashpara10/repos");
   const data = await res.json();
@@ -11,8 +12,6 @@ export async function getServerSideProps() {
 }
 
 const Home = ({ data }: any) => {
-  console.log(data);
-
   return (
     <div className=" w-full flex flex-col items-center justify-center ">
       <div className=" w-full flex items-center justify-center ">
@@ -24,11 +23,14 @@ const Home = ({ data }: any) => {
       <section className="max-w-3xl grid grid-cols-2 gap-2 px-3">
         {data.map((e: any) => {
           return (
-            <div className="max-w-md p-2.5 flex flex-col items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-[#121211]">
+            <div
+              key={e.id}
+              className="max-w-md p-2.5 flex flex-col items-center justify-center rounded-lg border border-gray-300 dark:border-gray-700 dark:border-opacity-30 dark:hover:brightness-[1.2] bg-white dark:bg-[#111010]"
+            >
               <a
                 href={e.html_url}
                 target="_blank"
-                className="w-full text-left  hover:underline dark:hover:text-blue-600 hover:text-blue-700"
+                className="w-full text-left text-black/90 dark:text-gray-100 font-semibold hover:underline dark:hover:text-blue-600 hover:text-blue-700"
               >
                 {e.name}
               </a>
@@ -57,8 +59,7 @@ const HomeCard = () => {
           Ashwin<span className=" text-3xl md:text-4xl px-1 ">🌱</span>
         </h1>
         <p className="font-mono max-w-sm text-gray-700 dark:text-gray-300 ">
-          Developer/Artist/Anime enthusiast learning and honing my developer
-          skills...
+          Developer/Artist/Anime enthusiast with a knack of creating stuff...
         </p>
       </div>
     </div>
