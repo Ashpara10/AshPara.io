@@ -12,20 +12,25 @@ type BlogProps = {
 };
 
 const BlogCard = ({ post }: BlogProps) => {
-  const { data }: any = useSWR(`/api/blog/${post.slug}`, fetcher, {
-    revalidateOnFocus: false,
-  });
-  const views = data?.total?.views;
+  // const { data }: any = useSWR(`/api/blog/${post.slug}`, fetcher, {
+  //   revalidateOnFocus: false,
+  // });
+  // const views = data?.total?.views;
 
   return (
-    <article className=" max-w-md w-full flex flex-col items-center justify-center gap-y-2 dark:border-gray-700 overflow-hidden ">
-      <div className="w-full flex flex-col items-center  justify-center px-1 pb-3 gap-y-1.5">
+    <article className=" max-w-md bg-white border border-gray-300  dark:bg-[#111010] dark:border-gray-700 dark:border-opacity-30 w-full flex flex-col items-center justify-center gap-y-2  rounded-md dark:hover:brightness-[1.2] overflow-hidden ">
+      <div>
+        <Image src={post.image} height={500} width={700} />
+      </div>
+      <div className="w-full flex flex-col items-center py-2 px-4 justify-center pb-3 gap-y-2.5">
         <Link href={`/blog/${post.slug}`}>
-          <h2 className="text-2xl font-bold">{post.title}</h2>
+          <h2 className="text-2xl px-3 w-full whitespace-pre-line font-bold">
+            {post.title}
+          </h2>
         </Link>
-        <span className="font-mono  w-full flex items-center justify-start gap-x-1 text-gray-900 dark:text-gray-200">
-          {views?.toString()} <FiEye />
-        </span>
+        <p className="w-full px-3 break-all whitespace-pre-wrap font-mono text-gray-900 dark:text-gray-100">
+          {post.description}
+        </p>
       </div>
     </article>
   );

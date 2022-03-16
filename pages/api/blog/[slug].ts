@@ -9,7 +9,7 @@ const handler: NextApiHandler = async (
   const slugParam = req.query.slug.toString();
 
   if (req.method === "GET") {
-    const views = await prisma.views.findUnique({
+    const views = await prisma.metrics.findUnique({
       where: {
         slug: slugParam,
       },
@@ -17,7 +17,7 @@ const handler: NextApiHandler = async (
     res.status(200).json({ total: views });
   }
   if (req.method === "POST") {
-    const views = await prisma.views.upsert({
+    const views = await prisma.metrics.upsert({
       where: {
         slug: slugParam,
       },

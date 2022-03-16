@@ -1,15 +1,17 @@
-generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
-}
-
 datasource db {
   provider             = "mysql"
   url                  = env("DATABASE_URL")
   referentialIntegrity = "prisma"
 }
 
-model Views {
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+model Metrics {
+  id    String @id @default(cuid())
   slug  String @unique
   views Int    @default(0)
+  likes Int    @default(0)
 }
