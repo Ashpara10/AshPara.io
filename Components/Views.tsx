@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import useSWR from "swr";
 import fetcher from "./lib/fetcher";
-import { FiEye } from "react-icons/fi";
 
 type Views = {
   views: Number;
@@ -11,14 +10,14 @@ type BlogSlug = {
 };
 
 const ViewsManager = ({ slug }: BlogSlug) => {
-  const { data }: any = useSWR(`/api/blog/${slug}`, fetcher, {
-    revalidateOnFocus: false,
+  const { data }: any = useSWR(`/api/blog/view/${slug}`, fetcher, {
+    revalidateOnFocus: true,
   });
   const views = data?.total?.views;
 
   useEffect(() => {
     const updateViews = () => {
-      fetch(`/api/blog/${slug}`, {
+      fetch(`/api/blog/view/${slug}`, {
         method: "POST",
       });
     };
@@ -26,7 +25,7 @@ const ViewsManager = ({ slug }: BlogSlug) => {
   }, [slug]);
   return (
     <span className="font-mono flex items-center justify-center gap-x-1 text-gray-900 dark:text-gray-200">
-      {views?.toString()} <FiEye />
+      {views?.toString()} views
     </span>
   );
 };

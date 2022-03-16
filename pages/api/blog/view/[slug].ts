@@ -1,28 +1,32 @@
-import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
+
 const prisma = new PrismaClient();
 
 const handler: NextApiHandler = async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
-  const slugParam = req.query.slug.toString();
+  const slugparam = req.query.slug.toString();
 
   if (req.method === "GET") {
-    const views = await prisma.metrics.findUnique({
+    const view = await prisma.metrics.findUnique({
       where: {
-        slug: slugParam,
+        slug: slugparam,
       },
     });
-    res.status(200).json({ total: views });
+
+    res.status(200).json({ total: view });
   }
+
   if (req.method === "POST") {
-    const views = await prisma.metrics.upsert({
+    const view = await prisma.metrics.upsert({
       where: {
-        slug: slugParam,
+        slug: slugparam,
       },
+
       create: {
-        slug: slugParam,
+        slug: slugparam,
       },
       update: {
         views: {
@@ -30,7 +34,7 @@ const handler: NextApiHandler = async (
         },
       },
     });
-    return res.status(200).json({ totalviews: views });
+    res.status(200).json({ total: view });
   }
 };
 

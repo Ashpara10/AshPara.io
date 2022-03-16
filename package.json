@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^3.10.0",
+    "@prisma/client": "^3.11.0",
     "contentlayer": "^0.1.1",
     "fuse.js": "^6.5.3",
     "next": "12.1.0",

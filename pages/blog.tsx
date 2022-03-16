@@ -25,7 +25,7 @@ const BlogPage = ({ posts }: any) => {
           onChange={(e: any) => setSearch(e.target.value)}
         />
       </div>
-      <section className="max-w-xl flex flex-col items-center justify-center gap-y-3">
+      <section className="max-w-xl flex flex-col items-center justify-center gap-y-5">
         {search.length > 0
           ? result.map((data: any) => {
               return <BlogCard key={data?.item.slug} post={data?.item} />;
