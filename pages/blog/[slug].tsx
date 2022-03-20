@@ -33,12 +33,12 @@ const BlogPost = ({ post }: { post: Blog }) => {
                   height={36}
                   className="rounded-full flex items-center justify-center object-contain"
                 />
-                <span className="px-2">
-                  {moment(post.createdAt).format("MMMM DD Y")}
-                  {" / "}
-                  <span>{post.readingTime.text}</span> {" / "}
-                  <ViewsManager slug={post.slug} />
-                </span>
+                <div className="w-full px-4 flex gap-x-1 items-center justify-between">
+                  <span>{post.readingTime.text}</span> {" * "}
+                  <span className="px-2">
+                    <ViewsManager slug={post.slug} />
+                  </span>
+                </div>
               </div>
             </div>
           </div>

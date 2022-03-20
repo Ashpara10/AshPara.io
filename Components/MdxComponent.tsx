@@ -6,7 +6,7 @@ const AnchorTag = (props: any) => {
     <a
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-700 dark:text-blue-600 underline "
+      className="text-blue-700 dark:text-blue-500 underline  "
       href={props.href}
     >
       {props.children}
@@ -75,7 +75,7 @@ const RoundedImage = (props: any) => {
 };
 
 const StrongTag = (props: any) => {
-  return <strong className=" font-bold">{props.children}</strong>;
+  return <strong className=" font-semibold ">{props.children}</strong>;
 };
 
 const Para = (props: any) => {

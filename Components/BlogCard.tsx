@@ -22,7 +22,7 @@ const BlogCard = ({ post }: BlogProps) => {
   return (
     <article className=" max-w-md bg-white border border-gray-300  dark:bg-[#111010] dark:border-gray-700 dark:border-opacity-30 w-full flex flex-col items-center justify-center gap-y-2  rounded-md dark:hover:brightness-[1.2] overflow-hidden ">
       <div>
-        <Image src={post.image} height={500} width={700} />
+        <Image src={post.image} height={400} width={600} loading="lazy" />
       </div>
       <div className="w-full flex flex-col items-center  px-4 justify-center py-3 pb-4 gap-y-2.5">
         <Link href={`/blog/${post.slug}`}>
@@ -44,14 +44,14 @@ const BlogCard = ({ post }: BlogProps) => {
             >
               <path
                 strokeLinecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
               ></path>
               <path
                 strokeLinecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
               ></path>
             </svg>
