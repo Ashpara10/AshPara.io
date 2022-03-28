@@ -1,5 +1,5 @@
 ---
-title: "Two Forms of Pre-rendering using next-contentlayer and Next js??"
+title: "Why I started using Typescript and why you should too?"
 description: "Exploring Data fectching methods and static site generation features in next js "
 image: "/totoro.jpg"
 createdAt: "2022-02-27"
@@ -58,5 +58,34 @@ const BlogCard = ({ post }: BlogProps) => {
 
 export default BlogCard;
 ```
+
+# Awesome Typescript classes
+
+```ts
+enum Note {
+  Error,
+  Loading,
+  Success,
+}
+// types
+type Note{
+  title:string,
+  content:string,
+  published:boolean
+  createdAt:string,
+  updatedAt:string,
+  slug:string
+}
+const Demo=({note}:{note:Note})=>{
+  return <h1 className="text-2xl font-bold">{note.title}</h1>
+}
+```
+
+## Why i transitioned to Typescript and why you should too!
+
+- **Typescript** - provides its retrictions and helps to identify bugs during development of your app.
+- **Security** -Why you should use TypeScript over [JavaScript](http://vitejs.dev)?
+- Image result for why to use typescript
+  In contrast to JavaScript, TypeScript code is more reliable and easier to refactor. This enables developers to evade errors and do rewrites much easier.
 
 You can [view the entire source code here](https://github.com/leerob/youtube-to-mp3). Happy coding! 😄

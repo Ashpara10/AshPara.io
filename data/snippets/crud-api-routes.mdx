@@ -1,11 +1,9 @@
 ---
-title: "Creating CRUD Api Routes in Nextjs."
+title: "CRUD-api Routes in Nextjs."
 description: "Creating Production ready Api-routes inbuilt in Next js!!"
 createdAt: "2022-02-06"
 logo: "/twitter_profile.jpg"
 ---
-
-Nextjs provides an api folder in the `pages` directory
 
 ```jsx
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
@@ -32,4 +30,20 @@ const handler: NextApiHandler = async (
 };
 
 export default handler;
+```
+
+# Getting Started
+
+1. In the root dir of your [nextjs](https://nextjs.org) NextApiResponse you will see a api folder
+   which may contain a file named `hello.js/ts`
+
+```tsx
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+
+const handler: NextApiHandler = async (
+  req: NextApiRequest,
+  res: NextApiResponse
+) => {
+  return res.status(200).json({ msg: "Hello JhonDoe" });
+};
 ```

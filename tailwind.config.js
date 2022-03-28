@@ -8,9 +8,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        dark: "#111111",
+        bdark: "#272727",
+      },
       fontFamily: {
         robo: ["Roboto", "sans-serif"],
-        fre: ["Fredoka", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

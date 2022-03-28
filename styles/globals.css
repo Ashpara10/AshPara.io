@@ -1,7 +1,6 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Inter:wght@400;800&display=swap");
 
 @tailwind base;
-
 @tailwind components;
 @tailwind utilities;
 
@@ -14,22 +13,14 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  scrollbar-width: 10px;
+  scrollbar-gutter: thin;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.text-glow {
-  text-shadow: 0 0 80px rgba(116, 176, 255, 0.75), 0 0 32px rgb(250, 102, 255);
-}
-.text-gradient {
-  background: linear-gradient(to right, #30cfd0, #c43ad6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .navbar {
-  @apply fixed top-0 w-full h-[65px] flex items-center  justify-between py-2.5 px-4 bg-gray-50 z-10  dark:bg-[#111010];
+  @apply fixed top-0 w-full h-[65px] flex items-center  justify-between py-2.5 px-4 bg-white z-10;
 }
 
 .token.comment,
@@ -91,16 +82,12 @@ body {
   @apply font-mono bg-gray-300 rounded-md p-2.5
 } */
 
-code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-gray-800 dark:text-gray-50;
+  @apply overflow-x-auto whitespace-pre  my-2 border border-gray-300 dark:border-bdark  p-2.5 rounded-md;
 }
 
-pre {
-  @apply overflow-auto my-2 border border-gray-300 dark:border-[#ffffff17]  p-2.5 rounded-md;
-}
-pre {
-  scrollbar-width: none;
+.rehype-code-title {
+  @apply bg-bdark;
 }
 
 .MdxHeadings {

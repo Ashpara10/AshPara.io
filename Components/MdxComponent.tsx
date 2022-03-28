@@ -6,7 +6,7 @@ const AnchorTag = (props: any) => {
     <a
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-700 dark:text-blue-500 underline  "
+      className="text-blue-700 dark:text-blue-600 underline  "
       href={props.href}
     >
       {props.children}
@@ -16,7 +16,7 @@ const AnchorTag = (props: any) => {
 const StyledHeading1 = (props: any) => {
   return (
     <>
-      <h1 className=" text-3xl font-sans font-bold py-1  dark:text-gray-200">
+      <h1 className=" text-3xl font-inter font-bold py-1 dark:text-gray-50">
         {props.children}
       </h1>
     </>
@@ -25,7 +25,7 @@ const StyledHeading1 = (props: any) => {
 
 const BlockQuote = (props: any) => {
   return (
-    <blockquote className="w-full rounded-sm border-l-[.25rem] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 py-2 px-3 font-semibold italic    dark:text-gray-300">
+    <blockquote className="w-full rounded-sm border-l-[4px] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 py-2 px-3 font-semibold italic  dark:text-gray-100">
       {props.children}
     </blockquote>
   );
@@ -33,14 +33,14 @@ const BlockQuote = (props: any) => {
 
 const StyledHeading2 = (props: any) => {
   return (
-    <h2 className=" text-2xl font-sans font-bold py-1 dark:text-gray-200">
+    <h2 className=" text-2xl font-inter font-bold py-1 dark:text-gray-50">
       {props.children}
     </h2>
   );
 };
 const StyledHeading3 = (props: any) => {
   return (
-    <h3 className=" text-xl font-sans font-bold py-1 dark:text-gray-200">
+    <h3 className=" text-xl font-inter font-bold py-1 dark:text-gray-50">
       {props.children}
     </h3>
   );
@@ -48,14 +48,14 @@ const StyledHeading3 = (props: any) => {
 
 const UnorderedList = (props: any) => {
   return (
-    <ul className="w-full list-outside max-w-xl list-disc mx-auto flex gap-y-2 my-2 flex-col ">
+    <ul className="w-full list-inside list-disc flex gap-y-2 my-2 flex-col ">
       {props.children}
     </ul>
   );
 };
 const OrderedList = (props: any) => {
   return (
-    <ol className="w-full max-w-xl list-decimal mx-auto  flex gap-y-2 my-2 flex-col ">
+    <ol className="w-full list-decimal list-inside flex gap-y-2 my-2 flex-col ">
       {props.children}
     </ol>
   );
@@ -75,11 +75,11 @@ const RoundedImage = (props: any) => {
 };
 
 const StrongTag = (props: any) => {
-  return <strong className=" font-semibold ">{props.children}</strong>;
+  return <strong className=" font-medium ">{props.children}</strong>;
 };
 
 const Para = (props: any) => {
-  return <p className="w-full font-normal">{props.children}</p>;
+  return <p className="w-full ">{props.children}</p>;
 };
 
 const MdxComponent = {
