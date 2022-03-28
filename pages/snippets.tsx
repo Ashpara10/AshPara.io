@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const SnippetPage = ({ posts }: any) => {
   return (
-    <div className="w-full gap-y-2 px-8 flex flex-col items-center justify-center">
+    <div className="w-full gap-y-2 px-6 flex flex-col items-center justify-center">
       <div className="max-w-2xl w-full flex items-center justify-between">
         <h1 className=" w-full font-inter text-left text-4xl  font-bold ">
           Code Snippets

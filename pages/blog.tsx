@@ -18,7 +18,7 @@ const BlogPage = ({ posts }: any) => {
   const result = fuse.search(String(search.length > 1 && search));
 
   return (
-    <div className="px-8 my-9 w-full flex flex-col items-center justify-center">
+    <div className="px-6 my-9 w-full flex flex-col items-center justify-center">
       <div className="w-full flex items-center justify-center py-3">
         <SearchBox
           query={search}

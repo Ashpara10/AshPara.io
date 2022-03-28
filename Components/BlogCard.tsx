@@ -24,7 +24,7 @@ const BlogCard = ({ post }: BlogProps) => {
       <div>
         <Image src={post.image} height={400} width={600} loading="lazy" />
       </div>
-      <div className="w-full flex flex-col items-center justify-start px-8 pt-4 gap-y-4 pb-4 ">
+      <div className="w-full flex flex-col items-center justify-start px-6 pt-4 gap-y-4 pb-4 ">
         <div className="w-full flex flex-col items-center justify-center  ">
           <Link href={`/blog/${post.slug}`}>
             <h2 className="text-2xl font-inter text-[#121212] dark:text-gray-50 w-full  font-bold">
