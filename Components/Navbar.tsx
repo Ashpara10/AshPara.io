@@ -15,7 +15,7 @@ const Navbar: React.FC = ({ children }) => {
         >
           {theme === "light" ? <BiMoon /> : <BiSun />}
         </button>
-        <button className=" group visible md:hidden font-extrabold rounded-lg text-xl text-gray-900 dark:text-gray-100 p-3">
+        <button className=" group  visible md:hidden font-extrabold rounded-lg text-xl text-red-900 dark:text-red-100 p-3">
           <AiOutlineMenu />
           <div className="w-full -z-10 invisible group-focus:visible h-screen absolute top-0 left-0 bottom-0 right-0 bg-black/50" />
           <div className="group text-base font-normal translate-x-[-100%] group-focus-within:translate-x-[0%] flex flex-col fixed top-0 left-0 bottom-0 bg-white transition-transform dark:bg-dark w-72 h-screen">
