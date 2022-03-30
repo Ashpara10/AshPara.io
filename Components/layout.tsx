@@ -2,7 +2,6 @@ import React from "react";
 import Navbar, { NavList } from "./Navbar";
 import router from "next/router";
 import Footer from "./Footer";
-import MobileBar from "./MobileBar";
 
 const Layout: React.FC = (props) => {
   return (
