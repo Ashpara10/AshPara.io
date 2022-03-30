@@ -20,7 +20,7 @@ const BlogCard = ({ post }: BlogProps) => {
   const likeCount = data?.total?.likes.toString();
 
   return (
-    <article className=" max-w-md bg-white border border-gray-300  dark:bg-dark dark:hover:bg-[#1a1a1a] dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-md  overflow-hidden ">
+    <article className=" max-w-sm bg-white border border-gray-300  dark:bg-dark dark:hover:bg-[#1a1a1a] dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-md  overflow-hidden ">
       <div>
         <Image src={post.image} height={400} width={600} loading="lazy" />
       </div>
