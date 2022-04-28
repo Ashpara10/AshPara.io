@@ -19,7 +19,7 @@ const Home = () => {
       <div className="w-full min-h-screen sticky top-0 -z-10">
         <Image layout="fill" className="absolute top-0 " src={"/totoro.jpg"} />
       </div>
-      <div className="w-full px-8 py-6 flex flex-col items-center justify-center bg-amber-50 dark:bg-dark">
+      <div className="w-full px-8 py-6 flex flex-col items-center justify-center bg-orange-50 dark:bg-dark">
         {/* <h2 className="text-4xl font-extrabold max-w-2xl w-full my-5">Blogs</h2> */}
         <div
           ref={ref}

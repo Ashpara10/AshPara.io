@@ -13,7 +13,7 @@ const Navbar: React.FC = ({ children }) => {
   const { rendered } = useDelayedRender(nav);
 
   return (
-    <nav className="navbar bg-amber-50 dark:bg-dark ">
+    <nav className="navbar bg-orange-50 dark:bg-dark ">
       <div className=" flex items-center justify-start">{children}</div>
       <div className=" flex items-center text-xl justify-between gap-x-2 ">
         <button
@@ -36,7 +36,7 @@ const Navbar: React.FC = ({ children }) => {
         )}
 
         <div
-          className={`z-20 font-normal text-base w-64 translate-x-[-100%] overflow-hidden flex flex-col fixed top-0 left-0 bottom-0 bg-white  dark:bg-dark ${
+          className={`z-20 font-normal text-base w-64 translate-x-[-100%] overflow-hidden flex flex-col fixed top-0 left-0 bottom-0 bg-orange-50  dark:bg-dark ${
             rendered
               ? "translate-x-0 transition-all"
               : " translate-x-[-100%] transition-all"
