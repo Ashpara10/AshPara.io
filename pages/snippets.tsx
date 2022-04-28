@@ -7,21 +7,13 @@ import Image from "next/image";
 
 const SnippetPage = ({ posts }: any) => {
   return (
-    <div className="w-full gap-y-2 px-6 flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen gap-y-2 px-6 flex flex-col items-center justify-start">
       <div className="max-w-2xl w-full flex items-center justify-between">
         <h1 className=" w-full font-inter text-left text-4xl  font-bold ">
           Code Snippets
         </h1>
-        <div>
-          <Image
-            src={"/twitter_profile.jpg"}
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
-        </div>
       </div>
-      <section className="max-w-2xl gap-3 py-3  w-full grid grid-cols-1 md:grid-cols-2 items-center justify-center">
+      <section className="max-w-2xl gap-x-3 gap-y-5 py-3  w-full grid grid-cols-1 md:grid-cols-2 items-center justify-center">
         {posts.map((data: Snippet) => {
           return <SnippetCard key={data.slug} snippet={data} />;
         })}

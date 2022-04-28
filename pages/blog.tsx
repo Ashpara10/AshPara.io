@@ -25,7 +25,7 @@ const BlogPage = ({ posts }: any) => {
           onChange={(e: any) => setSearch(e.target.value)}
         />
       </div>
-      <section className="max-w-2xl flex flex-col items-center justify-center gap-3">
+      <section className="max-w-2xl min-h-screen flex flex-col items-center justify-start gap-y-5">
         {search.length > 0
           ? result.map((data: any) => {
               return <BlogCard key={data?.item.slug} post={data?.item} />;
@@ -67,7 +67,7 @@ const SearchBox = ({ query, onChange }: SearchInput) => {
       value={query}
       placeholder="Search for Blogs..."
       onChange={onChange}
-      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl md:max-w-2xl w-full border border-gray-300 dark:border-bdark bg-white dark:bg-inherit"
+      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl md:max-w-2xl dark:bg-[#1a1a1a] w-full border border-gray-300 dark:border-[#272727] bg-white dark:bg-[#191919] dark:bg-inherit"
     />
   );
 };

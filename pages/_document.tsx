@@ -15,7 +15,7 @@ const MyDocument = () => {
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@7/00?family=Roboto:wght@900&display=swap"
         rel="stylesheet"
       />
-      <body className="bg-white dark:bg-dark">
+      <body className="bg-amber-50 dark:bg-dark">
         <Main />
         <NextScript />
       </body>

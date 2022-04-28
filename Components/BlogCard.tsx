@@ -20,21 +20,27 @@ const BlogCard = ({ post }: BlogProps) => {
   const likeCount = data?.total?.likes.toString();
 
   return (
-    <article className=" max-w-sm bg-white border border-gray-300  dark:bg-dark dark:hover:bg-[#1a1a1a] dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-md  overflow-hidden ">
+    <article className=" max-w-sm bg-amber-50 border-b border-gray-400  dark:bg-dark dark:hover:bg-[#1a1a1a] dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-sm  overflow-hidden ">
       <div>
-        <Image src={post.image} height={400} width={600} loading="lazy" />
+        <Image
+          src={post.image}
+          height={400}
+          width={600}
+          loading="lazy"
+          className="rounded-md"
+        />
       </div>
       <div className="w-full flex flex-col items-center justify-start px-6 pt-4 gap-y-4 pb-4 ">
         <div className="w-full flex flex-col items-center justify-center  ">
           <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-2xl font-inter text-[#121212] dark:text-gray-50 w-full  font-bold">
+            <h2 className="text-2xl text-[#121212] dark:text-gray-50 w-full  font-extrabold">
               {post.title}
             </h2>
           </Link>
         </div>
 
         <div className="w-full flex text-[#121212] dark:text-gray-50 items-center justify-start gap-x-5 font-mono ">
-          <span className=" flex items-center justify-center hover:text-green-500 dark:hover:text-green-300 gap-x-2">
+          <span className=" flex items-center justify-center gap-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -57,7 +63,7 @@ const BlogCard = ({ post }: BlogProps) => {
             </svg>
             {viewCount}
           </span>
-          <span className="flex items-center justify-center hover:text-pink-500 dark:hover:text-pink-300 gap-x-2">
+          <span className="flex items-center justify-center gap-x-2">
             <svg className="h-6 w-6" viewBox="0 0 24 24">
               <path
                 className="fill-current"

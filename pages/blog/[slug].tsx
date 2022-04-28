@@ -21,18 +21,12 @@ const BlogPost = ({ post }: { post: Blog }) => {
       </Head>
       <article className="max-w-2xl w-full p-3 flex flex-col items-center justify-center gap-y-2">
         <div className="w-full flex flex-col gap-y-3 items-center justify-center">
-          <h2 className="font-bold font-inter w-full text-left mb-2 text-2xl md:text-4xl tracking-tight  text-dark dark:text-gray-50">
+          <h2 className="font-bold w-full text-left mb-2 text-2xl md:text-4xl tracking-tight  text-dark dark:text-gray-50">
             {post.title}
           </h2>
           <div className="w-full flex  items-center justify-between">
             <div className="w-full flex items-center justify-between gap-x-1 font-mono">
               <div className="flex items-center justify-center gap-x-1">
-                <Image
-                  src={"/twitter_profile.jpg"}
-                  width={36}
-                  height={36}
-                  className="rounded-full flex items-center justify-center object-contain"
-                />
                 <div className="w-full px-4 flex gap-x-1 items-center justify-between">
                   <span>{post.readingTime.text}</span> {" * "}
                   <span className="px-2">
