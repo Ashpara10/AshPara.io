@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useTheme } from "next-themes";
 import { BiSun, BiMoon } from "react-icons/bi";
-import { AiOutlineMenu } from "react-icons/ai";
+import { HiMenuAlt4 } from "react-icons/hi";
 import router from "next/router";
 import useDelayedRender from "use-delayed-render";
 import Context from "./lib/context";
@@ -26,7 +26,7 @@ const Navbar: React.FC = ({ children }) => {
           onClick={() => setNav(!nav)}
           className=" visible md:hidden font-extrabold rounded-lg text-xl text-gray-900 dark:text-gray-100 p-3"
         >
-          <AiOutlineMenu />
+          <HiMenuAlt4 />
         </button>
         {nav && (
           <div
