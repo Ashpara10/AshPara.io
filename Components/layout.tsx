@@ -9,19 +9,19 @@ const Layout: React.FC = (props) => {
       <Navbar>
         <NavList>
           <li
-            className="px-2 font-normal hover:underline"
+            className="px-2  hover:underline"
             onClick={() => router.push("/")}
           >
             Home
           </li>
           <li
-            className="px-2 font-normal hover:underline"
+            className="px-2  hover:underline"
             onClick={() => router.push("/blog")}
           >
             Blog
           </li>
           <li
-            className="px-2 font-normal hover:underline"
+            className="px-2  hover:underline"
             onClick={() => router.push("/snippets")}
           >
             Snippets

@@ -4,12 +4,10 @@ import { BiSun, BiMoon } from "react-icons/bi";
 import { HiMenuAlt4 } from "react-icons/hi";
 import router from "next/router";
 import useDelayedRender from "use-delayed-render";
-import Context from "./lib/context";
 
 const Navbar: React.FC = ({ children }) => {
   const { theme, setTheme } = useTheme();
   const [nav, setNav] = useState(false);
-  const { query } = useContext(Context);
   const { rendered } = useDelayedRender(nav);
 
   return (
@@ -45,33 +43,27 @@ const Navbar: React.FC = ({ children }) => {
           <ul className="w-full py-3  px-5 flex flex-col items-center justify-center gap-y-2">
             <li
               onClick={() => router.push("/")}
-              className="w-full hover:transition-all hover:bg-gray-200 text-left py-1 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               Home
             </li>
             <li
               onClick={() => router.push("/")}
-              className="w-full hover:transition-all hover:bg-gray-200 text-left py-1 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               About
             </li>
             <li
               onClick={() => router.push("/blog")}
-              className="w-full hover:transition-all hover:bg-gray-200 text-left py-1 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               Blog
             </li>
             <li
               onClick={() => router.push("/snippets")}
-              className="w-full hover:transition-all hover:bg-gray-200 text-left py-1 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               Snippets
-            </li>
-            <li
-              onClick={() => router.push("/tweets")}
-              className="w-full hover:transition-all hover:bg-gray-200 text-left py-1 px-4 dark:hover:bg-[#212121] rounded-md"
-            >
-              Tweets
             </li>
           </ul>
         </div>
@@ -89,3 +81,8 @@ export const NavList: React.FC = (props) => {
     </ul>
   );
 };
+
+
+const Newsletter=()=>{
+
+}
