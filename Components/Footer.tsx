@@ -15,7 +15,7 @@ const Footer = () => {
           >
             <FaInstagram />
           </a>
-          <a href="https://github.com/Ashpara10" target={"_blank"} className="">
+          <a href="https://github.com/Ashpara10 " target={"_blank"} className="">
             <FaGithub />
           </a>
         </div>

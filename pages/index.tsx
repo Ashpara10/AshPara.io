@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { allBlogs } from "../.contentlayer/generated";
 import router from "next/router";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BlogCard from "../Components/BlogCard";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { useFormik } from "formik";
@@ -28,18 +29,18 @@ const Newsletter = () => {
       </span>
 
       <form
-        className="w-full max-w-2xl gap-3  flex "
+        className="w-full max-w-2xl gap-3  flex flex-col md:flex-row "
         onSubmit={formik.handleSubmit}
       >
         <input
           value={formik.values.email}
-          className="p-2.5 w-full border dark:border-[#212121] dark:bg-[#191919] rounded-md focus-within:outline-none"
+          className="p-2.5  w-full border dark:border-[#212121] dark:bg-[#191919] rounded-md focus-within:outline-none"
           placeholder="Enter email to stay updated"
           onChange={formik.handleChange}
         />
         <button
           type="submit"
-          className="font-semibold text-white bg-indigo-600 py-2 px-4 rounded-md"
+          className="w-fit font-semibold text-white bg-indigo-600 py-2 px-4 rounded-md"
         >
           Submit
         </button>
@@ -49,6 +50,10 @@ const Newsletter = () => {
 };
 
 const Home = () => {
+  const { text } = useTypewriter({
+    words: ["Developer", "Artist", "Anime Enthusiast", "Hook!"],
+    loop: 0,
+  });
   return (
     <div className="w-full min-h-screen px-8  ">
       <div className="w-full  flex items-center justify-center ">
@@ -64,8 +69,8 @@ const Home = () => {
               <span className="w-full text-left  text-3xl md:text-4xl font-bold">
                 Ashwin Parande
               </span>
-              <span className="w-full text-left dark:text-gray-100 font-mono">
-                ( Developer / Artist )
+              <span className="w-full text-lg dark:text-gray-100 font-mono">
+                ( Newbie Web Developer / Artist )
               </span>
             </div>
           </div>

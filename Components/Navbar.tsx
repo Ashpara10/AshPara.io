@@ -76,13 +76,8 @@ export default Navbar;
 
 export const NavList: React.FC = (props) => {
   return (
-    <ul className=" invisible md:visible w-full text-gray-800 dark:text-gray-200 flex items-center justify-center  gap-x-5">
+    <ul className=" font-semibold invisible md:visible w-full text-gray-800 dark:text-gray-200 flex items-center justify-center  gap-x-5">
       {props.children}
     </ul>
   );
 };
-
-
-const Newsletter=()=>{
-
-}

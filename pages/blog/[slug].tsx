@@ -17,13 +17,14 @@ const BlogPost = ({ post }: { post: Blog }) => {
   return (
     <div className="w-full flex items-center justify-center px-3 md:mx-auto">
       <Head>
-        <title>{`${post.title}-AshPara`}</title>
+        <title>{`${post.title} - AshPara`}</title>
+        <meta name="description" content={post.description} />
       </Head>
       <article className="max-w-2xl w-full p-3 flex flex-col items-center justify-center gap-y-2">
         <div className="w-full flex flex-col gap-y-3 items-center justify-center">
-          <h2 className="font-bold w-full text-left mb-2 text-2xl md:text-4xl tracking-tight  text-dark dark:text-gray-50">
+          <h1 className="font-bold w-full text-left mb-2 text-2xl md:text-4xl tracking-tight  text-dark dark:text-gray-50">
             {post.title}
-          </h2>
+          </h1>
           <div className="w-full flex  items-center justify-between">
             <div className="w-full flex items-center justify-between gap-x-1 font-mono">
               <div className="flex items-center justify-center gap-x-1">
