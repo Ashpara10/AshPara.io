@@ -45,40 +45,43 @@ const Navbar: React.FC = ({ children }) => {
         )}
 
         <div
-          className={`z-20 font-normal text-base w-64 translate-x-[-100%] overflow-hidden flex flex-col fixed top-0 left-0 bottom-0 bg-white  dark:bg-dark ${
+          className={`px-5 py-2 z-20 font-normal text-base w-64 translate-x-[-100%] overflow-hidden flex flex-col fixed top-0 left-0 bottom-0 bg-white  dark:bg-dark ${
             rendered
               ? "translate-x-0 transition-all"
               : " translate-x-[-100%] transition-all"
           } h-screen`}
         >
-          <ul className="w-full py-3  px-5 flex flex-col items-center justify-center gap-y-2">
+          <div className="w-full px-2 flex items-center justify-start">
+            <NavIcon />
+          </div>
+          <ul className="w-full py-3 flex flex-col items-center justify-center gap-y-2">
             <li
               onClick={() => router.push("/")}
-              className="w-full flex items-center gap-r-2 justify-start hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full flex items-center gap-r-2 justify-start hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               Home
             </li>
             <li
               onClick={() => router.push("/")}
-              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               About
             </li>
             <li
               onClick={() => router.push("/blog")}
-              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               Blog
             </li>
             <li
               onClick={() => router.push("/snippets")}
-              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               Snippets
             </li>
             <li
               onClick={() => router.push("/snippets")}
-              className="w-full hover:transition-all hover:bg-orange-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+              className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
             >
               <button
                 className="nav-theme-btn  visible md:invisible "
