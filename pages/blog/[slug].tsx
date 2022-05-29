@@ -15,7 +15,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
         <meta name="title" content={post.title} />
         <meta name="description" content={post.description} />
       </Head>
-      <article className="max-w-2xl w-full p-3 flex flex-col items-center justify-center gap-y-2">
+      <article className="max-w-2xl w-full flex flex-col items-center justify-center gap-y-2">
         <div className="w-full flex flex-col gap-y-3 items-center justify-center">
           <h1 className="font-bold w-full text-left mb-2 text-2xl md:text-4xl tracking-tight  text-dark dark:text-gray-50">
             {post.title}
