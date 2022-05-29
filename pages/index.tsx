@@ -1,27 +1,12 @@
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { allBlogs } from "../.contentlayer/generated";
 import router from "next/router";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BlogCard from "../Components/BlogCard";
 import { BsArrowRightCircle } from "react-icons/bs";
-import { useFormik } from "formik";
-export async function getServerSideProps() {
-  return {
-    props: {},
-  };
-}
+import { useState } from "react";
 
-const Newsletter = () => {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-    },
-
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+export const Newsletter = () => {
+  const [email, setEmail] = useState("");
   return (
     <div className="w-full mt-10 p-4 flex flex-col items-center justify-center">
       <span className="text-3xl pb-6 font-bold max-w-2xl text-left w-full">
@@ -30,13 +15,16 @@ const Newsletter = () => {
 
       <form
         className="w-full max-w-2xl gap-3  flex flex-col md:flex-row "
-        onSubmit={formik.handleSubmit}
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert(JSON.stringify(email));
+        }}
       >
         <input
-          value={formik.values.email}
+          value={email}
           className="p-2.5  w-full border dark:border-[#212121] dark:bg-[#191919] rounded-md focus-within:outline-none"
           placeholder="Enter email to stay updated"
-          onChange={formik.handleChange}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <button
           type="submit"
@@ -50,13 +38,9 @@ const Newsletter = () => {
 };
 
 const Home = () => {
-  const { text } = useTypewriter({
-    words: ["Developer", "Artist", "Anime Enthusiast", "Hook!"],
-    loop: 0,
-  });
   return (
-    <div className="w-full min-h-screen px-8  ">
-      <div className="w-full  flex items-center justify-center ">
+    <div className="w-full min-h-screen ">
+      {/* <div className="w-full  flex items-center justify-center ">
         <div className="max-w-2xl pb-6 w-full ">
           <div className="flex flex-col md:flex-row items-center justify-start">
             <Image
@@ -75,7 +59,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Posts />
       <Newsletter />
     </div>

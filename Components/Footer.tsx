@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className=" w-full mt-32  flex flex-col items-center justify-center">
@@ -15,7 +16,11 @@ const Footer = () => {
           >
             <FaInstagram />
           </a>
-          <a href="https://github.com/Ashpara10 " target={"_blank"} className="">
+          <a
+            href="https://github.com/Ashpara10 "
+            target={"_blank"}
+            className=""
+          >
             <FaGithub />
           </a>
         </div>

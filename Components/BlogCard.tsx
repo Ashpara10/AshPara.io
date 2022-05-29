@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import moment from "moment";
 import { Blog } from "../.contentlayer/generated";
 import useSWR, { SWRResponse } from "swr";
 import fetcher from "./lib/fetcher";
@@ -11,16 +10,16 @@ type BlogProps = {
 };
 
 const BlogCard = ({ post }: BlogProps) => {
-  const { data, error }: SWRResponse = useSWR(
-    `/api/blog/view/${post.slug}`,
-    fetcher
-  );
+  // const { data, error }: SWRResponse = useSWR(
+  //   `/api/blog/view/${post.slug}`,
+  //   fetcher
+  // );
 
-  const viewCount = data?.total?.views.toString();
-  const likeCount = data?.total?.likes.toString();
+  // const viewCount = data?.total?.views.toString();
+  // const likeCount = data?.total?.likes.toString();
 
   return (
-    <article className=" max-w-sm bg-orange-50 border-b border-gray-400  dark:bg-dark dark:hover:bg-[#1a1a1a] hover:rounded-md dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-sm  overflow-hidden ">
+    <article className=" max-w-sm bg-white border-b border-gray-400  dark:bg-dark dark:hover:bg-[#1a1a1a] hover:rounded-md dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-sm  overflow-hidden ">
       <div>
         <Image
           src={post.image}
@@ -31,12 +30,13 @@ const BlogCard = ({ post }: BlogProps) => {
         />
       </div>
       <div className="w-full flex flex-col items-center justify-start px-6 pt-4 gap-y-4 pb-4 ">
-        <div className="w-full flex flex-col items-center justify-center  ">
+        <div className="w-full gap-y-3 flex flex-col items-center justify-center  ">
           <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-2xl text-[#121212] dark:text-gray-50 w-full  font-extrabold">
+            <a className="text-xl text-black dark:text-gray-50 w-full  font-bold">
               {post.title}
-            </h2>
+            </a>
           </Link>
+          <p>{post.description}</p>
         </div>
 
         <div className="w-full flex text-[#121212] dark:text-gray-50 items-center justify-start gap-x-5 font-mono ">
@@ -61,7 +61,7 @@ const BlogCard = ({ post }: BlogProps) => {
                 d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
               ></path>
             </svg>
-            {viewCount}
+            {/* {viewCount} */}
           </span>
           <span className="flex items-center justify-center gap-x-2">
             <svg className="h-6 w-6" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ const BlogCard = ({ post }: BlogProps) => {
                 d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.813-1.148 2.353-2.73 4.644-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.375-7.454 13.11-10.037 13.156H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.035 11.596 8.55 11.658 1.52-.062 8.55-5.917 8.55-11.658 0-2.267-1.822-4.255-3.902-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.015-.03-1.426-2.965-3.955-2.965z"
               />
             </svg>
-            {likeCount}
+            {/* {likeCount} */}
           </span>
         </div>
       </div>

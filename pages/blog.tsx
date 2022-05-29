@@ -18,14 +18,8 @@ const BlogPage = ({ posts }: any) => {
   const result = fuse.search(String(search.length > 1 && search));
 
   return (
-    <div className="px-6 my-9 w-full flex flex-col items-center justify-center">
-      <div className="w-full flex items-center justify-center py-3">
-        <SearchBox
-          query={search}
-          onChange={(e: any) => setSearch(e.target.value)}
-        />
-      </div>
-      <section className="max-w-2xl min-h-screen flex flex-col items-center justify-start gap-y-5">
+    <div className=" my-9 w-full min-h-screen flex flex-col items-center justify-center">
+      <section className="max-w-2xl flex flex-col items-center justify-start gap-5">
         {search.length > 0
           ? result.map((data: any) => {
               return <BlogCard key={data?.item.slug} post={data?.item} />;
@@ -67,7 +61,7 @@ const SearchBox = ({ query, onChange }: SearchInput) => {
       value={query}
       placeholder="Search for Blogs..."
       onChange={onChange}
-      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl md:max-w-2xl dark:bg-[#1a1a1a] w-full border border-gray-300 dark:border-[#272727] bg-orange-50/80 dark:bg-[#191919] dark:bg-inherit"
+      className="p-2.5 rounded-md font-mono focus-visible:outline-none max-w-xl md:max-w-sm  w-full border border-gray-300 dark:border-[#272727] bg-gray-50 dark:bg-[#191919] "
     />
   );
 };

@@ -4,20 +4,15 @@ import React from "react";
 import { allBlogs, Blog } from "../../.contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MdxComponent from "../../Components/MdxComponent";
-import moment from "moment";
-import ViewsManager from "../../Components/Views";
-
-type BlogProps = {
-  post: Blog;
-};
 
 const BlogPost = ({ post }: { post: Blog }) => {
   const Component = useMDXComponent(post.body.code);
 
   return (
-    <div className="w-full flex items-center justify-center px-3 md:mx-auto">
+    <div className="w-full flex items-center justify-center md:mx-auto">
       <Head>
         <title>{`${post.title} - AshPara`}</title>
+        <meta name="title" content={post.title} />
         <meta name="description" content={post.description} />
       </Head>
       <article className="max-w-2xl w-full p-3 flex flex-col items-center justify-center gap-y-2">
@@ -31,7 +26,8 @@ const BlogPost = ({ post }: { post: Blog }) => {
                 <div className="w-full px-4 flex gap-x-1 items-center justify-between">
                   <span>{post.readingTime.text}</span> {" * "}
                   <span className="px-2">
-                    <ViewsManager slug={post.slug} />
+                    {0}
+                    {/* <ViewsManager slug={post.slug} /> */}
                   </span>
                 </div>
               </div>
@@ -44,7 +40,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
             priority
             className="w-full p-1.5 rounded-md "
           />
-          <div className="max-w-none font-inter w-full flex flex-col gap-y-3 px-1.5 ">
+          <div className="max-w-none font-inter text-black w-full flex flex-col gap-y-5 px-1.5 ">
             <Component components={MdxComponent} />
           </div>
         </div>

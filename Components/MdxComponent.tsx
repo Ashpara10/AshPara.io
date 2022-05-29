@@ -25,7 +25,7 @@ const StyledHeading1 = (props: any) => {
 
 const BlockQuote = (props: any) => {
   return (
-    <blockquote className="w-full rounded-sm border-l-[4px] flex flex-col items-center justify-center border-gray-500  dark:border-gray-800 py-2 px-3 font-semibold italic  dark:text-gray-100">
+    <blockquote className="w-full rounded-sm border-l-[2px] flex flex-col items-center justify-center border-gray-500  dark:border-[#eb5514] py-2 px-3 font-medium italic text-black  dark:text-gray-100">
       {props.children}
     </blockquote>
   );
@@ -48,14 +48,14 @@ const StyledHeading3 = (props: any) => {
 
 const UnorderedList = (props: any) => {
   return (
-    <ul className="w-full list-inside list-disc flex gap-y-2 my-2 flex-col ">
+    <ul className="w-full list-inside list-disc flex gap-y-2 my-2 dark:text-white flex-col ">
       {props.children}
     </ul>
   );
 };
 const OrderedList = (props: any) => {
   return (
-    <ol className="w-full list-decimal list-inside flex gap-y-2 my-2 flex-col ">
+    <ol className="w-full list-decimal list-inside flex gap-y-2 my-2 dark:text-white flex-col ">
       {props.children}
     </ol>
   );
@@ -79,7 +79,11 @@ const StrongTag = (props: any) => {
 };
 
 const Para = (props: any) => {
-  return <p className="w-full ">{props.children}</p>;
+  return (
+    <p className="w-full font-inter text-medium dark:text-white  ">
+      {props.children}
+    </p>
+  );
 };
 
 const MdxComponent = {
