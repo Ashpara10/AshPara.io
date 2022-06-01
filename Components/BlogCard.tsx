@@ -19,7 +19,7 @@ const BlogCard = ({ post }: BlogProps) => {
   // const likeCount = data?.total?.likes.toString();
 
   return (
-    <article className=" max-w-sm bg-white border-b border-gray-400  dark:bg-dark dark:hover:bg-[#1a1a1a] hover:rounded-md dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  rounded-sm  overflow-hidden ">
+    <article className=" max-w-sm bg-white border-b border-gray-400  dark:bg-dark dark:hover:bg-[#1a1a1a] dark:hover:rounded-md dark:border-bdark  w-full flex flex-col items-center justify-center gap-y-2  overflow-hidden ">
       <div>
         <Image
           src={post.image}
@@ -29,13 +29,14 @@ const BlogCard = ({ post }: BlogProps) => {
           className="rounded-md"
         />
       </div>
-      <div className="w-full flex flex-col items-center justify-start px-6 pt-4 gap-y-4 pb-4 ">
+      <div className="w-full flex flex-col items-center justify-start px-6 py-4  gap-y-4  ">
         <div className="w-full gap-y-3 flex flex-col items-center justify-center  ">
-          <Link href={`/blog/${post.slug}`}>
-            <a className="text-xl text-black dark:text-gray-50 w-full  font-bold">
-              {post.title}
-            </a>
-          </Link>
+          <a
+            href={`/blog/${post.slug}`}
+            className="text-xl text-black dark:text-gray-50 w-full  font-bold"
+          >
+            {post.title}
+          </a>
           <p>{post.description}</p>
         </div>
 

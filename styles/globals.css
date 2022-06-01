@@ -24,16 +24,16 @@ body {
 
 
 .nav-theme-btn{
-  @apply font-bold bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2 rounded-md font-mono
+  @apply font-extrabold  bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2.5 rounded-md font-mono
 }
 
 .nav-li {
   @apply flex items-center justify-center py-1.5 px-3
 }
 
-.nav-theme-btn {
+/* .nav-theme-btn {
   @apply font-extrabold bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2.5 rounded-md font-mono
-}
+} */
 
 
 pre {
