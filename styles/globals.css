@@ -13,31 +13,34 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  scrollbar-width: 10px;
   scrollbar-gutter: thin;
   @apply font-inter
 }
 
+.slant {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 16px),
+    0% 100%
+  )
+}
 .navbar {
-  @apply w-full h-[60px] flex items-center justify-center py-2.5 px-6 bg-white z-10;
+  @apply w-full h-[60px] flex items-center justify-center py-2.5 px-6 bg-gray-50 z-10;
 }
 
 
 .nav-theme-btn{
-  @apply font-extrabold  bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2.5 rounded-md font-mono
+  @apply font-extrabold text-xl  bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2.5 rounded-md font-mono
 }
 
 .nav-li {
   @apply flex items-center justify-center py-1.5 px-3
 }
 
-/* .nav-theme-btn {
-  @apply font-extrabold bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2.5 rounded-md font-mono
-} */
-
 
 pre {
-  @apply dark:bg-transparent bg-white
+  @apply  bg-transparent
 }
 
 
@@ -105,7 +108,7 @@ span{
 } */
 
 pre[class*="language-"] {
-  @apply overflow-x-auto whitespace-pre my-2 border border-gray-300 dark:border-bdark p-2.5 rounded-md;
+  @apply overflow-x-auto whitespace-pre my-2 border border-gray-300 dark:border-bdark p-2.5 rounded-md  ;
 }
 
 .rehype-code-title {

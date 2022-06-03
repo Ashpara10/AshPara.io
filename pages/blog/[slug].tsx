@@ -15,16 +15,16 @@ const BlogPost = ({ post }: { post: Blog }) => {
         <meta name="title" content={post.title} />
         <meta name="description" content={post.description} />
       </Head>
-      <article className="max-w-2xl w-full flex flex-col items-center justify-center gap-y-2">
+      <article className="max-w-2xl w-full flex flex-col items-center justify-center gap-y-2 mt-5">
         <div className="w-full flex flex-col gap-y-3 items-center justify-center">
-          <h1 className="font-bold w-full text-left mb-2 text-2xl md:text-4xl tracking-tight  text-dark dark:text-gray-50">
+          <h1 className="font-bold w-full text-left mb-2 text-2xl md:text-3xl tracking-tight  text-dark dark:text-gray-50">
             {post.title}
           </h1>
           <div className="w-full flex  items-center justify-between">
             <div className="w-full flex items-center justify-between gap-x-1 font-mono">
               <div className="flex items-center justify-center gap-x-1">
                 <div className="w-full px-4 flex gap-x-1 items-center justify-between">
-                  <span>{post.readingTime.text}</span> {" * "}
+                  <span>{post.readingTime.text}</span> {" / "}
                   <span className="px-2">
                     {0}
                     {/* <ViewsManager slug={post.slug} /> */}
@@ -35,12 +35,12 @@ const BlogPost = ({ post }: { post: Blog }) => {
           </div>
           <Image
             src={post.image}
-            height={400}
+            height={450}
             width={700}
             priority
             className="w-full p-1.5 rounded-md "
           />
-          <div className="max-w-none font-inter text-black w-full flex flex-col gap-y-5 px-1.5 ">
+          <div className="max-w-none font-inter text-[#0b0b0b] w-full flex flex-col gap-y-5 px-1.5 ">
             <Component components={MdxComponent} />
           </div>
         </div>

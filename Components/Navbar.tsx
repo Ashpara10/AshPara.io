@@ -18,7 +18,7 @@ const Navbar: React.FC = ({ children }) => {
   };
 
   return (
-    <nav className="navbar bg-white dark:bg-dark ">
+    <nav className="navbar bg-gray-50 dark:bg-dark ">
       <div className="w-full flex invisible md:visble items-center text-xl justify-between gap-x-2 ">
         <NavIcon />
         <NavList>

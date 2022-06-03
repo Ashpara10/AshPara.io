@@ -5,6 +5,7 @@ import BlogCard from "../Components/BlogCard";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { useState } from "react";
 import BlogSection from "../Components/Home/BlogSection";
+import HomeSection from "../Components/Home/HomeSection";
 
 export const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -42,7 +43,6 @@ const Home = () => {
   return (
     <div className="w-full min-h-screen  flex flex-col items-center justify-center">
       <BlogSection />
-      <Newsletter />
     </div>
   );
 };

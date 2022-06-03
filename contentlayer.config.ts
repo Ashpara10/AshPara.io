@@ -27,7 +27,7 @@ const Blog = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    description: { type: "string", required: false },
+    description: { type: "string", required: false, },
     image: { type: "string", required: true },
     createdAt: { type: "string", required: true },
     // tags: { type: "list", required: true },

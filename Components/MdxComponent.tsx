@@ -25,7 +25,7 @@ const StyledHeading1 = (props: any) => {
 
 const BlockQuote = (props: any) => {
   return (
-    <blockquote className="w-full rounded-sm border-l-[2px] flex flex-col items-center justify-center border-gray-500  dark:border-[#eb5514] py-2 px-3 font-medium italic text-black  dark:text-gray-100">
+    <blockquote className="w-full border-l-2 flex flex-col items-center justify-center border-violet-500  dark:border-violet-900 dark:text-black py-3 px-4 font-base italic   ">
       {props.children}
     </blockquote>
   );
@@ -48,14 +48,14 @@ const StyledHeading3 = (props: any) => {
 
 const UnorderedList = (props: any) => {
   return (
-    <ul className="w-full list-inside list-disc flex gap-y-2 my-2 dark:text-white flex-col ">
+    <ul className="w-full list-outside list-disc flex gap-y-3.5 my-2 dark:text-white flex-col ">
       {props.children}
     </ul>
   );
 };
 const OrderedList = (props: any) => {
   return (
-    <ol className="w-full list-decimal list-inside flex gap-y-2 my-2 dark:text-white flex-col ">
+    <ol className="w-full list-decimal list-outside flex gap-y-3.5 my-2 dark:text-white flex-col ">
       {props.children}
     </ol>
   );
