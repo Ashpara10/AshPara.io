@@ -20,7 +20,7 @@ const BlogCard = ({ post }: { post: Blog }) => {
         />
       </div>
       <div className="px-6 mt-3 flex flex-col  items-center justify-center">
-        <h1 className="text-xl font-semibold">
+        <h1 className="text-xl  font-semibold">
           <a onClick={() => router.push(`/blog/${post.slug}`)}>{title}</a>
         </h1>
         <p className="dark:text-gray-200 break-all leading-normal mt-3">

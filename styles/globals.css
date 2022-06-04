@@ -31,7 +31,7 @@ body {
 
 
 .nav-theme-btn{
-  @apply font-extrabold text-xl  bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2.5 rounded-md font-mono
+  @apply font-extrabold text-lg md:text-xl bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2 md:p-2.5 rounded-md font-mono
 }
 
 .nav-li {
