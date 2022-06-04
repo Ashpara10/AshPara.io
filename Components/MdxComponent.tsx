@@ -48,7 +48,7 @@ const StyledHeading3 = (props: any) => {
 
 const UnorderedList = (props: any) => {
   return (
-    <ul className="w-full list-outside list-disc flex gap-y-3.5 my-2 dark:text-white flex-col ">
+    <ul className="w-full list-outside list-disc flex gap-y-3.5 my-2 dark:text-white flex-col   ">
       {props.children}
     </ul>
   );
