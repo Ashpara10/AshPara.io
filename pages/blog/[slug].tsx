@@ -4,6 +4,7 @@ import React from "react";
 import { allBlogs, Blog } from "../../.contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MdxComponent from "../../Components/MdxComponent";
+import ViewsManager from "../../Components/Views";
 
 const BlogPost = ({ post }: { post: Blog }) => {
   const Component = useMDXComponent(post.body.code);
@@ -26,8 +27,7 @@ const BlogPost = ({ post }: { post: Blog }) => {
                 <div className="w-full px-4 flex gap-x-1 items-center justify-between">
                   <span>{post.readingTime.text}</span> {" / "}
                   <span className="px-2">
-                    {0}
-                    {/* <ViewsManager slug={post.slug} /> */}
+                    <ViewsManager slug={post.slug} />
                   </span>
                 </div>
               </div>

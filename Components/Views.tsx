@@ -25,7 +25,7 @@ const ViewsManager = ({ slug }: BlogSlug) => {
   }, [slug]);
   return (
     <span className="font-mono flex items-center justify-center gap-x-1 text-gray-900 dark:text-gray-200">
-      {views?.toString()} views
+      {views === 0 ? 0 : views?.toString()} views
     </span>
   );
 };
