@@ -21,7 +21,7 @@ const BlogSection = () => {
           className=" text-violet-800 dark:text-violet-500 flex items-center justify-center mt-2 gap-x-2"
           onClick={() => router.push("/blog")}
         >
-          Read More{" "}
+          Read All Post{" "}
           <svg
             width="20"
             height="20"

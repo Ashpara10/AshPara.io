@@ -1,11 +1,5 @@
-import { useInView } from "react-intersection-observer";
-import { allBlogs } from "../.contentlayer/generated";
-import router from "next/router";
-import BlogCard from "../Components/BlogCard";
-import { BsArrowRightCircle } from "react-icons/bs";
 import { useState } from "react";
 import BlogSection from "../Components/Home/BlogSection";
-import HomeSection from "../Components/Home/HomeSection";
 
 export const Newsletter = () => {
   const [email, setEmail] = useState("");
