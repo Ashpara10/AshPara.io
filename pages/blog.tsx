@@ -1,11 +1,11 @@
 import type { GetStaticProps, NextPage } from "next";
-import { allBlogs } from "../.contentlayer/generated";
+import { allBlogs, Blog } from "../.contentlayer/generated";
 import { pick } from "@contentlayer/client";
 import BlogCard from "../Components/BlogCard";
 import React, { useState } from "react";
 import Fuse from "fuse.js";
 
-const BlogPage = ({ posts }: any) => {
+const BlogPage = ({ posts }: { posts: Blog[] }) => {
   const [search, setSearch] = useState("");
 
   const options = {
@@ -15,16 +15,22 @@ const BlogPage = ({ posts }: any) => {
 
   const fuse = new Fuse(posts, options);
 
-  const result = fuse.search(String(search.length > 1 && search));
+  const result = fuse.search(String(search.length > 0 && search));
 
   return (
     <div className=" my-9 w-full min-h-screen flex flex-col items-center justify-center">
-      <section className="max-w-2xl flex flex-col items-center justify-start gap-5">
+      <input
+        value={search}
+        placeholder="Search for posts..."
+        onChange={(e) => setSearch(e.target.value)}
+        className="py-2.5 font-mono w-full max-w-lg  px-4 mb-3 bg-gray-50 border border-gray-300 dark:border-bdark focus-within:outline-none dark:bg-dark  rounded-md "
+      />
+      <section className="max-w-2xl min-h-screen flex flex-col items-center justify-start gap-5">
         {search.length > 0
           ? result.map((data: any) => {
               return <BlogCard key={data?.item.slug} post={data?.item} />;
             })
-          : posts.map((data: any) => <BlogCard key={data.slug} post={data} />)}
+          : posts.map((data: Blog) => <BlogCard key={data.slug} post={data} />)}
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import router from "next/router";
 import React from "react";
 import { allBlogs } from "../../.contentlayer/generated";
 import BlogCard from "../BlogCard";
+import ArrowIcon from "../Icons/ArrowIcon";
 
 const BlogSection = () => {
   return (
@@ -21,22 +22,7 @@ const BlogSection = () => {
           className=" text-violet-800 dark:text-violet-500 flex items-center justify-center mt-2 gap-x-2"
           onClick={() => router.push("/blog")}
         >
-          Read All Post{" "}
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-          >
-            <path
-              d="M6.5 11.5L9.64645 8.35355C9.84171 8.15829 9.84171 7.84171 9.64645 7.64645L6.5 4.5"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
+          Read All Post <ArrowIcon />
         </a>
       </div>
     </section>
