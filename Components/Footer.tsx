@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
+import router from "next/router";
 
 const Footer = () => {
   return (
@@ -8,21 +9,26 @@ const Footer = () => {
         <span className=" dark:text-gray-100 py-4 w-full text-center">
           © 2022 Ashwin Parande. All Rights Reserved.
         </span>
-        <div className="flex dark:text-black text-xl flex-wrap  gap-4">
-          <a
-            href="https://www.instagram.com/ashwin_p100/"
-            target={"_blank"}
-            className="bg-gray-50 p-2.5 rounded-full"
+        <div className=" w-full flex items-center justify-center ">
+          <div
+            className="flex flex-col items-center justify-center pt-4 gap-3
+          "
           >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://github.com/Ashpara10 "
-            target={"_blank"}
-            className="bg-gray-50 p-2.5 rounded-full"
-          >
-            <FaGithub />
-          </a>
+            <a
+              href="https://www.instagram.com/ashwin_p100/"
+              target={"_blank"}
+              className=" flex items-center justify-start w-full hover:text-violet-800 dark:hover:text-violet-600 hover:underline gap-2"
+            >
+              <FaInstagram className="text-xl " /> Instagram
+            </a>
+            <a
+              href="https://github.com/Ashpara10 "
+              className=" flex items-center justify-start w-full hover:text-violet-800 dark:hover:text-violet-600 hover:underline gap-2"
+              target={"_blank"}
+            >
+              <FaGithub className="text-xl " /> Github
+            </a>
+          </div>
         </div>
       </div>
     </footer>
