@@ -67,25 +67,25 @@ const Navbar: React.FC = ({ children }) => {
           </div>
           <li
             onClick={() => router.push("/")}
-            className="w-full flex items-center gap-r-2 justify-start hover:transition-all hover:bg-violet-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+            className="w-full flex items-center gap-r-2 justify-start hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
           >
             Home
           </li>
           <li
             onClick={() => router.push("/")}
-            className="w-full hover:transition-all hover:bg-violet-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+            className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
           >
             About
           </li>
           <li
             onClick={() => router.push("/blog")}
-            className="w-full hover:transition-all hover:bg-violet-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+            className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
           >
             Blog
           </li>
           <li
             onClick={() => router.push("/snippets")}
-            className="w-full hover:transition-all hover:bg-violet-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
+            className="w-full hover:transition-all hover:bg-gray-100 text-left py-1.5 px-4 dark:hover:bg-[#212121] rounded-md"
           >
             Snippets
           </li>
