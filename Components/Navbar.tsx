@@ -19,20 +19,24 @@ const Navbar: React.FC = ({ children }) => {
 
   return (
     <nav className="navbar bg-gray-50 dark:bg-dark ">
-      <div className="w-full  hidden md:flex items-center text-xl justify-between gap-x-2 ">
-        <NavIcon />
-        <NavList>
-          <NavItem children="Home" onClick={() => Router("/")} />
-          <NavItem children="About" onClick={() => Router("/blog")} />
-          <NavItem children="Blog" onClick={() => Router("/blog")} />
-        </NavList>
+      <div className="w-full max-w-2xl  hidden md:flex items-center text-xl justify-between gap-x-2 ">
+        <div>
+          <NavIcon />
+        </div>
+        <div>
+          <NavList>
+            <NavItem children="Home" onClick={() => Router("/")} />
+            <NavItem children="About" onClick={() => Router("/blog")} />
+            <NavItem children="Blog" onClick={() => Router("/blog")} />
+            <button
+              className="nav-theme-btn  hidden md:flex "
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            >
+              {theme === "light" ? <BiMoon /> : <BiSun />}
+            </button>
+          </NavList>
+        </div>
       </div>
-      <button
-        className="nav-theme-btn  hidden md:flex "
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      >
-        {theme === "light" ? <BiMoon /> : <BiSun />}
-      </button>
       <div className="w-full flex md:hidden items-center justify-between ">
         <button
           onClick={() => setNav(true)}
